@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct CombineCryproCoinAppApp: App {
+    
+    let viewModel = HomeViewModel(coinFetcher: CoinFetcher())
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView(viewModel: viewModel)
         }
     }
 }
